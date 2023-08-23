@@ -13,7 +13,7 @@ function App() {
   };
   
   const handleButtonClick = () => {
-    const OPENAI_API_KEY ="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";
+    const OPENAI_API_KEY ="Enter your API here.";
     console.log(inputValue);
     fetch('https://api.openai.com/v1/images/generations', {
       method: "POST",
@@ -24,7 +24,7 @@ function App() {
       }),
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer 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 ` // Use your API key
+        "Authorization": `Bearer ${OPENAI_API_KEY} ` // Use your API key
       }
     })
     .then(response => response.json())
